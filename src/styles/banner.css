@@ -1,0 +1,282 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1900px) {
+  .center {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #F5DB13;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 87vh;
+    width: 100%;
+  }
+  .center .banner {
+    width: 1125px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .center .banner .cover-text {
+    width: 70vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .center .banner .cover-text .-h1 {
+    font-size: 72px;
+  }
+  .center .banner .cover-text .-h1 span {
+    font-weight: bolder;
+  }
+  .center .banner .cover-text .-h2 {
+    font-size: 24px;
+  }
+  .center .banner .cover-text .pokedex-button {
+    margin: 10px;
+    color: black;
+    width: 231px;
+    height: 60px;
+    background-color: #73D677;
+    font-size: 23px;
+    font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 6px 1px #65be68;
+            box-shadow: 0px 6px 1px #65be68;
+  }
+  .center .banner .banner-art {
+    width: 706px;
+    height: 539px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .center {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #F5DB13;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 87vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  .center .banner {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .center .banner .cover-text {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: auto;
+    margin: 40px;
+  }
+  .center .banner .cover-text .-h1 {
+    font-size: 72px;
+  }
+  .center .banner .cover-text .-h1 span {
+    font-weight: bolder;
+  }
+  .center .banner .cover-text .-h2 {
+    font-size: 24px;
+  }
+  .center .banner .cover-text .pokedex-button {
+    color: black;
+    padding: 30px;
+    width: 231px;
+    height: 60px;
+    background-color: #73D677;
+    font-size: 23px;
+    font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 6px 1px #65be68;
+            box-shadow: 0px 6px 1px #65be68;
+  }
+  .center .banner .banner-art {
+    width: 706px;
+    height: 539px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .center {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #F5DB13;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 92vh;
+    height: auto;
+    width: 100%;
+  }
+  .center .banner {
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .center .banner .cover-text {
+    position: relative;
+    top: -30px;
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .center .banner .cover-text .-h1 {
+    font-size: 42px;
+  }
+  .center .banner .cover-text .-h1 span {
+    font-weight: bolder;
+  }
+  .center .banner .cover-text .-h2 {
+    font-size: 18px;
+  }
+  .center .banner .cover-text .pokedex-button {
+    color: black;
+    width: 80vw;
+    height: 50px;
+    background-color: #73D677;
+    font-size: 23px;
+    font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 6px 1px #65be68;
+            box-shadow: 0px 6px 1px #65be68;
+  }
+  .center .banner .banner-art {
+    max-width: 375px;
+    width: 100vw;
+    height: 267px;
+  }
+}
+/*# sourceMappingURL=banner.css.map */

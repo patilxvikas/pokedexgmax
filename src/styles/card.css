@@ -1,0 +1,174 @@
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 317px;
+  height: 140px;
+  background-color: #F6F7F9;
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 3px 30px #dadada;
+          box-shadow: 3px 3px 30px #dadada;
+}
+
+.card .card-sec {
+  padding: 10px;
+  width: 157px;
+  height: 140px;
+}
+
+.card .card-sec .name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 140px;
+  height: 25px;
+}
+
+.card .card-sec .stats {
+  margin: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .card-sec .stats .stat-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 36px;
+  height: 53px;
+}
+
+.card .card-sec .stats .stat-card .stat-val {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 36px;
+  height: 36px;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.card .card-sec .stats .stat-card .stat-name {
+  font-size: 12px;
+  text-align: center;
+}
+
+.card .card-sec .abilities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+.card .card-sec .abilities .ability-tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 20px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 15px;
+  margin: 3px;
+  font-weight: 500;
+}
+
+.card .img-section {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0px 20px 20px 0px;
+  width: 180px;
+  height: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 1920px) {
+  /*Tablets [601px -> 1200px]*/
+  .image {
+    width: 180px;
+    height: 180px;
+  }
+  .card {
+    margin: 30px 30px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .image {
+    width: 180px;
+    height: 180px;
+  }
+  .card {
+    margin: 20px 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .image {
+    width: 160px;
+    height: 160px;
+  }
+  .card {
+    margin: 20px 0px;
+  }
+}
+/*# sourceMappingURL=card.css.map */
