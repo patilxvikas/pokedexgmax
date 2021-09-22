@@ -26,10 +26,13 @@ function Pokedex() {
             else
         setFilteredData(data);
     }
-    const handleSubmit=(event)=>{
+    const handleSubmitkey=(event)=>{
         if (event.key === 'Enter') {
             setSearch(filteredData);
         }
+    }
+    const handleSubmit=()=>{
+        setSearch(filteredData);
     }
     return (
         <div className="pokedex">
@@ -40,7 +43,7 @@ function Pokedex() {
                     <input type="text"
                     placeholder="Enter your Pokemon...."
                     onChange={handleChange}
-                    onKeyDown={handleSubmit}
+                    onKeyDown={handleSubmitkey}
                     />
                     <button onClick={handleSubmit}>Search</button>
                 </div>
