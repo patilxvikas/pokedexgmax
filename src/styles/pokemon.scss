@@ -1,0 +1,157 @@
+.pokemon{
+    background-color: #1D1E1D;
+    width: 100%;
+    min-height:100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white; 
+    .back{
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 25px;
+        size: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        cursor: pointer;
+    }
+    .poke-card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+        .upper-card{
+            .poke-image{
+                width: 90vw;
+                max-width: 512px;
+                height: auto;
+            }
+            .abilities{
+                position: relative;
+                top: -20px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100%;
+                color: black;
+                .ability-tag{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                }
+            }
+        }
+        .lower-card{
+            width: 500px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            .poke-name{
+                // font-size: 60px;
+                border-bottom:1px solid white ;
+                width: 90%;
+                margin-bottom: 30px;
+                margin-left: 10px;
+            }
+            .types{
+                border: 1px solid white;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
+                padding: 10px;
+                border-radius: 10px;
+                .type-h{
+                    font-size: 25px;
+                }
+                .type{
+                    display: flex;
+                    flex-direction: row;
+                    .type-tag{
+                        margin: 5px 5px;
+                    }
+                }
+            }
+            .stats{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                .stat-card{
+                    // width: 200px;
+                    margin: 20px;
+                    border: 1px solid white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    .stat-val{
+                        font-size: 15px;
+                    }
+                    .stat-name{
+                        font-size: 18px;
+
+                    }
+                    .stat-bar{
+                        width: 100%;
+                        height: 5px;
+                        border-radius:3px;
+                        background-color: white;
+                        .stat-bar-val{
+                            border-radius:3px;
+                            height: 5px;
+                            background-color: #F5DB13;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1920px){
+    /*Tablets [601px -> 1200px]*/
+    .stat-card{
+        width: 200px;
+    }
+    .back{
+        margin: 40px 20px 20px 40px;
+
+    }
+    .poke-name{
+        font-size: 60px;
+    }
+    .ability-tag{
+        height: 30px;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 15px;
+        margin: 3px;
+        font-weight: 600;
+    }
+}
+@media only screen and (max-width: 600px){
+    .stat-card{
+        width: 90%;
+    }
+    .back{
+        margin: 20px 10px 10px 20px;
+    }
+    .poke-name{
+        font-size: 40px;
+    }
+    .ability-tag{
+        height: 25px;
+        padding: 5px;
+        font-size: 15px;
+        border-radius: 15px;
+        margin: 3px;
+        font-weight: 600;
+    }
+}

@@ -6,7 +6,6 @@ $nav-color:#F5DB13;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     nav{
         display: flex;
         flex-direction: row;
@@ -101,10 +100,12 @@ $nav-color:#F5DB13;
                 align-items: center;
                 background-color: $nav-color;
                 width: 100vw;
-                z-index: 1;
+                z-index: 0;
                 height: 200px;
                 transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+                transform: translateY(-250px);
                 top: 8vh;
+                opacity: 50;
                 box-shadow: 2px 2px 10px #e2cb1f;
                 .nav-item{
                     padding: 10px;
@@ -117,22 +118,42 @@ $nav-color:#F5DB13;
                 }
             }
             .hid{
-                display: none;
+                transform: translateY(0px);
             }
                 .hamm-burger{
+                    cursor: pointer;
                     margin: 0px 40px 0px 30px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
                     align-items: center;
                     width: 50px;
-                    height: 35px;
-                    .ham1,.ham2,.ham3{
+                    height: 40px;
+                    position: relative;
+                    .ham1,.ham3{
                         background-color: black;
                         width: 40px;
-                        height: 4px;
-                        border-radius: 4px;
+                        height: 5px;
+                        border-radius: 10px;
+                        position: absolute;
+                        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
                     }
+                    .ham1l{
+                        transform: rotate(0deg) translateY(-10px);
+                    }
+                    .ham3l{
+                        // top:30px;
+                        transform: rotate(0deg) translateY(10px);
+                    }
+                    .ham1c{
+                        transform: rotate(135deg) translateY(0px);
+                        // top:20px;
+                    }
+                    .ham3c{
+                        // top:20px;
+                        transform: rotate(45deg) translateY(0px);
+                    }
+                  
                 }
         } 
     }

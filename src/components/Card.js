@@ -1,7 +1,10 @@
 import axios from 'axios';
 import React from 'react';
 import { useEffect, useState, useRef } from 'react';
+import { useHistory } from "react-router-dom";
+
 import "../styles/card.css";
+
 const colours = {
     fire: '#FDDFDF',
     grass: '#DEFDE0',
@@ -26,6 +29,7 @@ function Card({ api }) {
     const [ability, setAbility] = useState([]);
     const [name,setName]=useState("");
     const e1 = useRef(null);
+    
     useEffect(() => {
         axios.get(api.url)
             .then((res) => {
@@ -38,7 +42,6 @@ function Card({ api }) {
     useEffect(() => {
         const type = () => {
             if (ability.length === 0) return "normal";
-            console.log("hi");
             return ability.slice(0, 1).map((val) => { return val.type.name });
         }
         const colors = {
@@ -65,8 +68,13 @@ function Card({ api }) {
         const s2=str[0].slice(1);
         return s1.toUpperCase()+s2;
     }
+    let history = useHistory();
+    function handleClick() {
+        history.push(`/pokemon/${pokemon.id}`);
+    }
     return (
-        <div className="card">
+        <>
+         <div className="card" onClick={handleClick}>
             <div className="card-sec">
                 <div className="name">{name}</div>
                 <div className="stats">
@@ -92,9 +100,12 @@ function Card({ api }) {
             <div ref={e1} className="img-section">
                 <img className="image"
                     alt={api.name}
-                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} />
+                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
+                     //src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} 
+                    />
             </div>
         </div>
+        </>
     )
 }
 export default Card;

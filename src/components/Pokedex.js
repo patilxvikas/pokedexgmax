@@ -1,17 +1,34 @@
 import React from 'react';
 import {useState,useEffect}from 'react';
+import ReactPaginate from 'react-paginate';
 import axios from 'axios';
+
+
 import Card from './Card';
-import "../styles/pokedex.css"
+import "../styles/pokedex.css";
+
 function Pokedex() {
     const [pokeList,setPokeList]=useState([]);
     const [filteredData,setFilteredData]=useState([]);
-    const [search,setSearch]=useState([]);
+    const [pageNumber,setPageNumber]=useState(0);
+    const pokemonPerPage=12;
+    const pagesVisited=pageNumber*pokemonPerPage;
 
-   
+    const displayPokemon=filteredData
+    .slice(pagesVisited,pagesVisited+pokemonPerPage)
+    .map((val,key)=>{
+        return(
+            <Card key={key} api={val}/>
+        );
+    });
 
+    const pageCount=Math.ceil(filteredData.length / pokemonPerPage);
+
+    const changePage=({selected})=>{
+        setPageNumber(selected);
+    }
     useEffect(() => {
-        axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=800")
+        axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=600")
         .then((res)=>{
             setPokeList(res.data.results);
         });
@@ -26,42 +43,31 @@ function Pokedex() {
             else
         setFilteredData(data);
     }
-    const handleSubmitkey=(event)=>{
-        if (event.key === 'Enter') {
-            setSearch(filteredData);
-        }
-    }
-    const handleSubmit=()=>{
-        setSearch(filteredData);
-    }
     return (
         <div className="pokedex">
             <div className="grid">
-                <div className="dex-text">800<span> Pokémon </span> for you to choose your favorite
+                <div className="dex-text" >800<span> Pokémon </span>for you to choose your favorite
                 </div>
                 <div className="dex-search">
                     <input type="text"
                     placeholder="Enter your Pokemon...."
                     onChange={handleChange}
-                    onKeyDown={handleSubmitkey}
                     />
-                    <button onClick={handleSubmit}>Search</button>
                 </div>
-                {/* <div className="dex-search-list">
-                    {
-                        filteredData.slice(0,4).map((val,key)=>{
-                            return(<div key={key} className="dex-search-val" onClick={handleSubmit}>{val.name}</div>)
-                        })
-                    }
-                </div> */}
                  
                 <div className="catlog">
-                    {search.map((val,key)=>{
-                        return(
-                            <Card key={key} api={val}/>
-                        );
-                    })
-                    }
+                    {displayPokemon}
+                    {filteredData.length>12 && <ReactPaginate 
+                        previousLabel={"Previous"}
+                        nextLabel={"Next"}
+                        pageCount={pageCount}
+                        onPageChange={changePage}
+                        containerClassName={"paginationBttns"}
+                        previousLinkClassName={"previousBttn"}
+                        nextClassName={"nextBttn"}
+                        disabledClassName={"paginationDisalabled"}
+                        activeClassName={"paginationActive"}
+                    />}
                 </div>
             </div>
         </div>

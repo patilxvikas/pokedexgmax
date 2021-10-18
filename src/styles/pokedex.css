@@ -45,7 +45,7 @@
 .pokedex .grid .dex-search input {
   border: none;
   height: 40px;
-  border-radius: 30px 0px 0px 30px;
+  border-radius: 30px 30px 30px 30px;
   background-color: #F2F2F2;
   padding: 0px 30px;
 }
@@ -53,24 +53,6 @@
 .pokedex .grid .dex-search input:focus {
   border: none;
   outline: none;
-}
-
-.pokedex .grid .dex-search button {
-  width: 100px;
-  height: 40px;
-  border: none;
-  border-radius: 0px 30px 30px 0px;
-  background-color: #F2F2F2;
-  outline: none;
-}
-
-.pokedex .grid .dex-search button:hover {
-  cursor: pointer;
-}
-
-.pokedex .grid .dex-search button:active {
-  outline: none;
-  background-color: #d8d8d8;
 }
 
 .pokedex .grid .dex-search-list .dex-search-val {
@@ -104,6 +86,40 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.pokedex .grid .catlog .paginationBttns {
+  margin: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  height: 40px;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+}
+
+.pokedex .grid .catlog .paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.pokedex .grid .catlog .paginationBttns a:hover {
+  color: white;
+  background-color: #e2cb1f;
+  border: 1px solid white;
+}
+
+.pokedex .grid .catlog .paginationActive a {
+  color: white;
+  background-color: #e2cb1f;
+  border: 1px solid white;
 }
 
 @media only screen and (max-width: 1920px) {
@@ -145,7 +161,7 @@
     font-size: 24px;
   }
   input {
-    width: 200px;
+    width: 80vw;
   }
   .dex-search-val {
     width: 200px;

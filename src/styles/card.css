@@ -12,6 +12,7 @@
   border-radius: 20px;
   -webkit-box-shadow: 3px 3px 30px #dadada;
           box-shadow: 3px 3px 30px #dadada;
+  cursor: pointer;
 }
 
 .card .card-sec {
@@ -139,6 +140,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.Pokemon .close {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1920px) {

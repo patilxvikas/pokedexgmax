@@ -4,21 +4,28 @@ import Nav from './Nav';
 import Banner from './Banner';
 import Footer from './Footer';
 import Pokedex from './Pokedex';
-
+import Pokemon from './Pokemon';
 function Layout() {
     return (
         <>
         <Router>
-            <Nav/>
             <Switch>
-                <Route path="/pokedex">
-                    <Pokedex/>
+                <Route path="/pokemon/:pokeid">
+                    <Pokemon />
                 </Route>
                 <Route path="/">
-                    <Banner/>
+                    <Nav/>
+                    <Switch>
+                        <Route path="/pokedex">
+                            <Pokedex/>
+                        </Route>
+                        <Route path="/">
+                            <Banner/>
+                        </Route>
+                    </Switch>
+                    <Footer/>
                 </Route>
             </Switch>
-            <Footer/>
         </Router>
         </>
     )

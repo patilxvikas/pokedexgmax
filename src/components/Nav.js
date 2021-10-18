@@ -18,15 +18,14 @@ function Nav() {
                     <NavLink exact to="/" activeClassName="active"><div className="nav-item">Home</div></NavLink>
                     <NavLink exact to="/pokedex" activeClassName="active"><div className="nav-item">Pokédex</div></NavLink>
                 </div>
-                <div className={!show?"nav-bar-mobile hid":"nav-bar-mobile"}>
+                <div className={!show?"nav-bar-mobile ":"nav-bar-mobile hid"}>
                     <NavLink exact to="/" activeClassName="active"><div className="nav-item">Home</div></NavLink>
                     <NavLink exact to="/pokedex" activeClassName="active"><div className="nav-item">Pokédex</div></NavLink>
                 </div>
                 <div className="hamm-burger" onClick={toggleShow}>
-                    <div className="ham1"></div>
-                    <div className="ham2"></div>
-                    <div className="ham3"></div>
-                </div>
+                    <div className={show?"ham1c ham1":"ham1 ham1l"}></div>
+                    <div className={show?"ham3c ham3":"ham3 ham3l"}></div>
+                </div> 
             </nav>
         </div>
     )
