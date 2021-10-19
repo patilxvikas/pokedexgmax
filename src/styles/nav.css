@@ -160,10 +160,11 @@
     transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    -webkit-transform: translateY(-250px);
-            transform: translateY(-250px);
+    -webkit-transform: translateY(-450px);
+            transform: translateY(-450px);
     top: 8vh;
     opacity: 50;
+    background-color: #e2cb1ff8;
     -webkit-box-shadow: 2px 2px 10px #e2cb1f;
             box-shadow: 2px 2px 10px #e2cb1f;
   }
