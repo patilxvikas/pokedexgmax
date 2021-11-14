@@ -17,7 +17,7 @@ function Layout() {
                     <Nav/>
                     <Switch>
                         <Route path="/pokedex">
-                            <Pokedex/>
+                                <Pokedex/>
                         </Route>
                         <Route path="/">
                             <Banner/>

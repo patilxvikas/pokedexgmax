@@ -1,15 +1,15 @@
 import React from 'react';
-import {useState,useEffect}from 'react';
+import {useState,useEffect,useContext}from 'react';
 import ReactPaginate from 'react-paginate';
 import axios from 'axios';
-
+import {Data} from './Context';
 
 import Card from './Card';
 import "../styles/pokedex.css";
 
 function Pokedex() {
     const [pokeList,setPokeList]=useState([]);
-    const [filteredData,setFilteredData]=useState([]);
+    const {filteredData,setFilteredData}=useContext(Data);
     const [pageNumber,setPageNumber]=useState(0);
     const pokemonPerPage=12;
     const pagesVisited=pageNumber*pokemonPerPage;
@@ -58,7 +58,7 @@ function Pokedex() {
                 <div className="catlog">
                     {displayPokemon}
                     {filteredData.length>12 && <ReactPaginate 
-                        previousLabel={"Previous"}
+                        previousLabel={"Prev"}
                         nextLabel={"Next"}
                         pageCount={pageCount}
                         onPageChange={changePage}
