@@ -15,14 +15,17 @@ $nav-color:#F5DB13;
             margin: 0px 40px;
         }
         .nav-bar{
+
             transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
             .nav-item{
+                text-decoration: none;
                 padding: 10px;
                 color: black;
                 font-weight: 500;
                 font-size: 25px;
             }
             .active {
+                text-decoration: none;
                 border-bottom: 3px solid black;
             }
         }
@@ -115,6 +118,7 @@ $nav-color:#F5DB13;
                     font-size: 25px;
                 }
                 .active {
+                    text-decoration: none;
                     border-bottom: 3px solid black;
                 }
             }

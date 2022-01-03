@@ -15,12 +15,12 @@ function Nav() {
             <nav>
                 <NavLink to="/" ><img className="logo" src={logo} alt="logo"></img></NavLink>
                 <div className="nav-bar">
-                    <NavLink exact to="/" activeClassName="active"><div className="nav-item">Home</div></NavLink>
-                    <NavLink exact to="/pokedex" activeClassName="active"><div className="nav-item">Pokédex</div></NavLink>
+                    <NavLink exact to="/" activeClassName="active" style={{ textDecoration: 'none' }}><div className="nav-item">Home</div></NavLink>
+                    <NavLink exact to="/pokedex" activeClassName="active" style={{ textDecoration: 'none' }}><div className="nav-item">Pokédex</div></NavLink>
                 </div>
                 <div className={!show?"nav-bar-mobile ":"nav-bar-mobile hid"}>
-                    <NavLink exact to="/" activeClassName="active"><div className="nav-item">Home</div></NavLink>
-                    <NavLink exact to="/pokedex" activeClassName="active"><div className="nav-item">Pokédex</div></NavLink>
+                    <NavLink exact to="/" activeClassName="active" style={{ textDecoration: 'none' }}><div className="nav-item">Home</div></NavLink>
+                    <NavLink exact to="/pokedex" activeClassName="active" style={{ textDecoration: 'none' }}><div className="nav-item">Pokédex</div></NavLink>
                 </div>
                 <div className="hamm-burger" onClick={toggleShow}>
                     <div className={show?"ham1c ham1":"ham1 ham1l"}></div>
