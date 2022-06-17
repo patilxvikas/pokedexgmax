@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
 import Nav from './Nav';
 import Banner from './Banner';
-import Footer from './Footer';
 import Pokedex from './Pokedex';
 import Pokemon from './Pokemon';
 function Layout() {
@@ -23,7 +22,6 @@ function Layout() {
                             <Banner/>
                         </Route>
                     </Switch>
-                    <Footer/>
                 </Route>
             </Switch>
         </Router>
