@@ -4,6 +4,7 @@ import Nav from './Nav';
 import Banner from './Banner';
 import Pokedex from './Pokedex';
 import Pokemon from './Pokemon';
+import Footer from './Footer';
 function Layout() {
     return (
         <>
@@ -22,6 +23,7 @@ function Layout() {
                             <Banner/>
                         </Route>
                     </Switch>
+                    <Footer/>
                 </Route>
             </Switch>
         </Router>

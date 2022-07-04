@@ -62,6 +62,8 @@ function Pokedex() {
                         nextLabel={"Next"}
                         pageCount={pageCount}
                         onPageChange={changePage}
+                        pageRangeDisplayed={1}
+                        marginPagesDisplayed={1}
                         containerClassName={"paginationBttns"}
                         previousLinkClassName={"previousBttn"}
                         nextClassName={"nextBttn"}
